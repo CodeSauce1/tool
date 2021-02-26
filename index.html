@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" placeholder="insert clients name here and click enter" id="myInput">
+<br>
+<br>
+<textarea id="area2"> name! MAKE 10K PLUS WITH ADEMENTO</textarea>
+<br>
+
+<button id="button2" >Copy Subject</button>
+<br>
+<br>
+<textarea id="area">Hey name,
+
+My name is Jared, I am part of the marketing team of Ademento. Upon scouting for potential clients on TikTok, we’ve identified you as someone who we could work with as a trustworthy & motivative influencer.
+
+As you may know, TikTok recently launched their creator fund of $200 million.. Compared to YouTube, that is pocket change. We believe that influencers on TikTok deserve the monetary compensation for putting in the work and growing a large following. ITEM Beauty created by Addison Rae, Sisters Apparel by James Charles, DixieCharliRingLights by the D’Amelio sisters.. Making a full time living on social media is made possible by leveraging your audience and monetizing them through different services/products. And we want to make it possible for you too..
+
+Here’s what we do at Ademento:
+
+Ademento is an e-commerce agency that helps build, design, and produce products for influencers to promote to their audience. 
+
+Here is our 4 step process:
+
+The graphics department at Ademento helps create stunning designs tailored to your audience. 
+
+With the assistance of our web development team, we create an online shop and display the products we produce for you.
+
+Your job is to showcase your new shop/merch on social media and market to your following in a unique and inclusive way.
+
+Generate income in your sleep, as Ademento does the rest. We help manage, fulfill, and maintain your new apparel brand.
+
+There is absolutely no risk involved for you. We dedicate our time and monetary assets to helping you build a successful brand.
+
+You can have a look at our website right here to learn a bit more about us;
+
+https://ademento.com/
+
+If this is something you’d be interested in, please do not hesitate to reply back. Looking forward to hearing from you.
+
+Thank you for your time & consideration,</textarea>
+<br>
+<button id="button1" >Copy Message</button>
+
+<script>
+let input=document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+  
+let les=document.getElementById("area").innerHTML;
+
+let rea= les.replace('name', input.value);
+
+
+
+document.getElementById("area").innerHTML=rea;
+
+
+let lee=document.getElementById("area2").innerHTML;
+
+let re= lee.replace('name', input.value);
+
+document.getElementById("area2").innerHTML=re;
+  }
+});
+
+
+
+
+document.getElementById("button1").onclick = function(){
+  document.getElementById("area").select();
+  document.execCommand('copy');
+setTimeout(function () { location.reload(true); }, 5000);
+};
+
+document.getElementById("button2").onclick = function(){
+  document.getElementById("area2").select();
+  document.execCommand('copy');
+
+};
+</script>
+<style>
+*{
+width:500px;
+height:50px;
+}
+</style>
+</body>
+</html>
